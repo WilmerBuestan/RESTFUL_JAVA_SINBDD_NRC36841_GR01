@@ -24,6 +24,7 @@ public class HistorialActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historial);
+        Pantalla.ajustarTeclado(this);
         findViewById(R.id.btnVolver).setOnClickListener(v -> finish());
         LinearLayout lista = findViewById(R.id.listaHistorial);
         View progreso = findViewById(R.id.progreso);

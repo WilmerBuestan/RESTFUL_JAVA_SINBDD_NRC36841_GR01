@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Pantalla.ajustarTeclado(this);
         ImageView monster = findViewById(R.id.imgMonster);
         monster.setClipToOutline(true);
         txtUsuario = findViewById(R.id.txtUsuario);

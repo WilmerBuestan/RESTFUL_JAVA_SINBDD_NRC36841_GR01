@@ -49,6 +49,7 @@ public class ConversionActivity extends AppCompatActivity {
             return;
         }
         setContentView(R.layout.activity_conversion);
+        Pantalla.ajustarTeclado(this);
         findViewById(R.id.imgMini).setClipToOutline(true);
         spnOrigen = findViewById(R.id.spnOrigen);
         spnDestino = findViewById(R.id.spnDestino);
