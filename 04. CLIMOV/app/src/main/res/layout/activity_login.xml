@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_degradado"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/imgMonster"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/marco_monster"
+            android:contentDescription="Monster"
+            android:padding="3dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/monster" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Conversión de Unidades"
+            android:textColor="@color/texto"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cliente MÓVIL · RESTful Java"
+            android:textColor="@color/cian"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Grupo 1 · NRC 36841 · ESPE"
+            android:textColor="@color/tenue"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/tarjetaLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tarjeta"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔐 Iniciar sesión"
+                android:textColor="@color/texto"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/campo"
+                android:hint="Usuario"
+                android:inputType="text"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="@color/texto"
+                android:textColorHint="@color/tenue" />
+
+            <EditText
+                android:id="@+id/txtClave"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/campo"
+                android:hint="Clave"
+                android:inputType="textPassword"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="@color/texto"
+                android:textColorHint="@color/tenue" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/azul"
+                android:text="Ingresar"
+                android:textColor="@color/oscuro"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp" />
+
+            <ProgressBar
+                android:id="@+id/progreso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/lblMensaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/rojo"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Servidor"
+                android:textColor="@color/tenue"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/txtServidor"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/campo"
+                android:inputType="textUri"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/tenue"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:orientation="vertical">
+
+    <!-- Cabecera -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fondo_degradado"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="14dp">
+
+        <ImageView
+            android:id="@+id/imgMini"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/marco_monster"
+            android:contentDescription="Monster"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/monster" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conversor Monster"
+                android:textColor="@color/texto"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cian"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:backgroundTint="@color/rojo"
+            android:text="Salir"
+            android:textColor="@color/oscuro"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Magnitudes (se crean desde el catálogo del servidor) -->
+            <LinearLayout
+                android:id="@+id/panelMagnitudes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/tarjeta"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="De"
+                    android:textColor="@color/tenue"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/spnOrigen"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/campo"
+                    android:popupBackground="@color/panel2" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIntercambiar"
+                    android:layout_width="56dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:backgroundTint="@color/panel2"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    android:text="⇅"
+                    android:textColor="@color/texto"
+                    android:textSize="20sp"
+                    app:cornerRadius="14dp"
+                    app:strokeColor="@color/borde"
+                    app:strokeWidth="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:textColor="@color/tenue"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/spnDestino"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/campo"
+                    android:popupBackground="@color/panel2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Valor"
+                    android:textColor="@color/tenue"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/txtValor"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/campo"
+                    android:hint="Ingrese el valor"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColor="@color/texto"
+                    android:textColorHint="@color/tenue"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnConvertir"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="14dp"
+                    android:backgroundTint="@color/azul"
+                    android:text="Convertir"
+                    android:textColor="@color/oscuro"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="14dp" />
+            </LinearLayout>
+
+            <!-- Resultado -->
+            <LinearLayout
+                android:id="@+id/tarjetaResultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/tarjeta"
+                android:gravity="center"
+                android:minHeight="130dp"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/lblResultado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="@color/texto"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblDetalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:textColor="@color/tenue"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHistorial"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="@color/cian"
+                android:text="🕘  Ver historial"
+                android:textColor="@color/oscuro"
+                android:textStyle="bold"
+                app:cornerRadius="14dp" />
+
+            <TextView
+                android:id="@+id/lblServidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:textColor="@color/tenue"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

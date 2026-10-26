@@ -1,0 +1,25 @@
+# ── Java / Maven / NetBeans ──
+target/
+*.class
+nbproject/private/
+nb-configuration.xml
+nbactions.xml
+
+# ── Android / Gradle ──
+.gradle/
+build/
+.idea/
+.kotlin/
+local.properties
+*.apk
+*.aab
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ── Sistema / Office ──
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+*.tmp

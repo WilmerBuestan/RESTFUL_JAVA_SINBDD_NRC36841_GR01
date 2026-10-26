@@ -1,0 +1,7 @@
+Proyecto: Conversion de Unidades - RESTful Java (sin base de datos)
+GRUPO 1 - NRC 36841
+
+Este proyecto NO tiene base de datos.
+Credenciales del sistema:
+Usuario: monster
+Clave: monster69

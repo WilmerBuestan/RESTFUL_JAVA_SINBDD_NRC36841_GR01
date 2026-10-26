@@ -1,0 +1,2 @@
+Coloque aqui la imagen del Monster con el nombre: monster.png
+(El panel del servidor la muestra en la cabecera.)

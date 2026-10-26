@@ -1,0 +1,1 @@
+Proyecto sin base de datos: no aplica Modelo Entidad-Relacion.
